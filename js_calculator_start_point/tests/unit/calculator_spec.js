@@ -27,7 +27,13 @@ describe('calculator', function () {
     calculator.previousTotal = 3
     calculator.multiply(4);
     assert.equal(calculator.runningTotal, 12);
-  })
+  });
+
+  it('should be able to divide', function(){
+    calculator.previousTotal = 6
+    calculator.divide(2);
+    assert.equal(calculator.runningTotal, 3);
+  });
 
 
 });
