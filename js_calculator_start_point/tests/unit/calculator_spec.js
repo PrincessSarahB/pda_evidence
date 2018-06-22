@@ -12,26 +12,26 @@ describe('calculator', function () {
   });
 
   it('should be able to add', function(){
-    calculator.previousTotal = 5
-    calculator.add(3);
-    assert.equal(calculator.runningTotal, 8)
+    calculator.previousTotal = 1
+    calculator.add(4);
+    assert.equal(calculator.runningTotal, 5)
   });
 
   it('should be able to subtract', function(){
-    calculator.previousTotal = 6
-    calculator.subtract(2);
-    assert.equal(calculator.runningTotal, 4)
+    calculator.previousTotal = 7
+    calculator.subtract(4);
+    assert.equal(calculator.runningTotal, 3)
   });
 
   it('should be able to multiply', function(){
     calculator.previousTotal = 3
-    calculator.multiply(4);
-    assert.equal(calculator.runningTotal, 12);
+    calculator.multiply(5);
+    assert.equal(calculator.runningTotal, 15);
   });
 
   it('should be able to divide', function(){
-    calculator.previousTotal = 6
-    calculator.divide(2);
+    calculator.previousTotal = 21
+    calculator.divide(7);
     assert.equal(calculator.runningTotal, 3);
   });
 
@@ -72,6 +72,21 @@ describe('calculator', function () {
     calculator.numberClick(2)
     calculator.operatorClick('=')
     assert.equal(calculator.runningTotal, 2.5)
+  });
+
+  it('should have working operator buttons, multiple used', function(){
+    calculator.numberClick(5)
+    calculator.operatorClick('*')
+    calculator.numberClick(5)
+    calculator.operatorClick('-')
+    calculator.numberClick(1)
+    calculator.operatorClick('/')
+    calculator.numberClick(2)
+    calculator.operatorClick('+')
+    calculator.numberClick(3)
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, 15)
+
   });
 
   it('should have working clear button', function(){
