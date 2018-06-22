@@ -74,6 +74,15 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 2.5)
   });
 
+  it('should have working clear button', function(){
+    calculator.numberClick(5)
+    calculator.numberClick(7)
+    calculator.numberClick(9)
+    assert.equal(calculator.runningTotal, 579)
+    calculator.clearClick()
+    assert.equal(calculator.runningTotal, 0)
+  });
+
 
 
 
