@@ -100,5 +100,4 @@ describe('calculator', function () {
 
 
 
-
 });
