@@ -35,11 +35,43 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 3);
   });
 
-  it('should have working number button clicks', function(){
+  it('should have working number buttons', function(){
     calculator.numberClick(2)
     calculator.numberClick(4)
     calculator.numberClick(3)
     assert.equal(calculator.runningTotal, 243);
+  });
+
+  it('should have working operator buttons +', function(){
+    calculator.numberClick(2)
+    calculator.operatorClick('+')
+    calculator.numberClick(5)
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, 7)
+  });
+
+  it('should have working operator buttons -', function(){
+    calculator.numberClick(5)
+    calculator.operatorClick('-')
+    calculator.numberClick(2)
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, 3)
+  });
+
+  it('should have working operator buttons *', function(){
+    calculator.numberClick(5)
+    calculator.operatorClick('*')
+    calculator.numberClick(2)
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, 10)
+  });
+
+  it('should have working operator buttons /', function(){
+    calculator.numberClick(5)
+    calculator.operatorClick('/')
+    calculator.numberClick(2)
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, 2.5)
   });
 
 
