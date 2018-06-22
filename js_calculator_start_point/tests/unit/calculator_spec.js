@@ -35,5 +35,14 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 3);
   });
 
+  it('should have working number button clicks', function(){
+    calculator.numberClick(2)
+    calculator.numberClick(4)
+    calculator.numberClick(3)
+    assert.equal(calculator.runningTotal, 243);
+  });
+
+
+
 
 });
