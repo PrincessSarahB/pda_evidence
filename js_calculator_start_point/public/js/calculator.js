@@ -20,7 +20,7 @@ Calculator.prototype = {
   },
 
   divide: function(number){
-    if(parseFloat(number) > parseFloat(0)){
+    if(number > 0){
     this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
   }
 
