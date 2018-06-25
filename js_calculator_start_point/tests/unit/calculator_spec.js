@@ -98,6 +98,14 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 0)
   });
 
+  it('should return Error when dividing by 0', function(){
+      calculator.numberClick(5)
+      calculator.operatorClick('/')
+      calculator.numberClick(0)
+      calculator.operatorClick('=')
+      assert.equal(calculator.runningTotal, "Error")
+  });
+
 
 
 });

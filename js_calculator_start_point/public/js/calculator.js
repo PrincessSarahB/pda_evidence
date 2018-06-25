@@ -25,7 +25,7 @@ Calculator.prototype = {
   }
 
   else {
-    this.runningTotal = NaN;
+    this.runningTotal = "Error";
   }
 
 
